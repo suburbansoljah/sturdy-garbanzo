@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NVSP Field Guide</string>
+    <string name="title_activity_main">NVSP Field Guide</string>
+    <string name="package_name">com.nrsfield.reference</string>
+    <string name="custom_url_scheme">com.nrsfield.reference</string>
+</resources>
