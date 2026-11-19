@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans/latin-400.css";
+@import "@fontsource/ibm-plex-sans/latin-500.css";
+@import "@fontsource/ibm-plex-sans/latin-600.css";
+@import "@fontsource/ibm-plex-sans/latin-700.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+@import "@fontsource/ibm-plex-mono/latin-600.css";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg: #0b1218;
+  --color-surface: #121b24;
+  --color-raised: #1a2733;
+  --color-fg: #e7eef5;
+  --color-muted: #8ea0b3;
+  --color-accent: #3ec1f0;
+  --color-accent-fg: #06202c;
+  --color-ink: #0b1218;
+  --color-on-dark: #f4f8fb;
+  --color-border: #2a3c4d;
+
+  --color-cat-a: #e24b4b;
+  --color-cat-b: #ef7a32;
+  --color-cat-c: #e2b340;
+  --color-cat-d: #9bc447;
+  --color-cat-e: #3dbe86;
+  --color-misd: #3ec1f0;
+  --color-civil: #64788a;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+}
+
+.safe-top {
+  padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+}
+
+.safe-bottom {
+  padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
