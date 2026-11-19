@@ -1,0 +1,39 @@
+name: Android CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: android-actions/setup-android@v4
+
+      - name: Build the app and compile the APK
+        run: |
+          npm ci
+          npm run build:mobile
+          npx cap sync android
+          sed -i 's/\r$//' android/gradlew
+          chmod +x android/gradlew
+          cd android
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nrs-field-reference
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
