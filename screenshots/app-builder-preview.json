@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NRS & NV DMV Field Reference",
+      "hasCanvas": false,
+      "bodyTextLen": 11106,
+      "bodyTextHash": "2f876b1e8f46933dd91cf7193b86f98892075d6b447884e3ac2d2362e6e57035",
+      "bodyTextPrefix": "NEVADA MDC NRS & Plate Reference Search statutes, plate prefixes",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NRS & NV DMV Field Reference",
+      "hasCanvas": false,
+      "bodyTextLen": 11106,
+      "bodyTextHash": "2f876b1e8f46933dd91cf7193b86f98892075d6b447884e3ac2d2362e6e57035",
+      "bodyTextPrefix": "NEVADA MDC NRS & Plate Reference Search statutes, plate prefixes",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
